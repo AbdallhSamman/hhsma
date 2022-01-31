@@ -1,0 +1,128 @@
+footer a {
+	color: #fff;
+}
+
+footer .top {
+	background: #37475a;
+}
+
+footer .top a {
+    padding: 17px;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+}
+
+footer .top a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer .top:hover {
+	background: #485769;
+}
+footer .footer__center {
+	margin: 0 auto;
+	max-width: 1080px;
+	padding: 0px 20px 20px;
+}
+
+footer ul {
+	margin: 30px 40px 30px 0;
+	display: inline-block;
+	vertical-align: top;
+	list-style: none;
+}
+
+footer .middle {
+	background: #232f3e;
+}
+
+footer .middle h3 {
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 10px;
+	padding: 0;
+	font-size: 16px;
+}
+
+footer .middle li {
+	position: relative;
+}
+.logo {
+	width: 76px;
+	height: 23px;
+}
+
+footer .middle a {
+	color: #ddd;
+	font-size: 13px;
+	display: block;
+	padding: 5px 0;
+	text-decoration: none;
+}
+
+footer ul.copy {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+footer ul.copy li {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+	color: #999;
+	font-size: 11px;
+}
+
+footer .middle .copy {
+	border-top: 1px solid #3a4553;
+	padding: 30px 20px 20px 20px;
+	margin: 0;
+}
+
+footer .middle .copy a {
+	padding: 7px 5px 7px 5px;
+	color: #ccc;
+	border: 1px solid #848688;
+	border-radius: 3px;
+}
+
+footer .middle .copy a:hover {
+	text-decoration: none;
+	border-color: #8d9096;
+}
+
+footer .middle .fa-globe {
+	margin-right: 5px;
+}
+
+footer .middle .flag-icon-us {
+	background-image: url("https://sp-bootstrap.global.ssl.fastly.net/8.0.0/images/flags/us.svg");
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	height: 1em;
+	width: 1.33333333em;
+	margin-right: 7px;
+	background-position: 0 2px;
+}
+.text-center,
+.center {
+	text-align: center;
+}
+@media (max-width: 767px) {
+	footer ul {
+		padding-top: 20px;
+		margin: 0px;
+		display: block;
+	}
+  footer .middle {
+    display: none;
+  }
+}
+

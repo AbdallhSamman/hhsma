@@ -1,0 +1,154 @@
+.profile_section{
+    margin: 20px 10px;
+    display: grid;
+    border: rgb(175, 174, 174) solid 2px;
+    border-radius: 10px;
+    grid-template-areas: 
+    'left right right right '
+    
+}
+.left{
+    grid-area: left;
+    border-right: rgb(175, 174, 174) solid 1px;
+  
+}
+.right{
+    grid-area: right;
+    
+}
+.weather{
+    grid-area: weather;
+}
+.profile_h2{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+    padding: 30px 0;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .card>img{
+      margin:auto;
+      border-radius: 50%;
+      padding-top: 15px;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  .change_info {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #CD9842;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  /* a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  } */
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  .order-card{
+      /* padding: 3rem; */
+      border: rgb(175, 174, 174) solid 2px;
+      border-radius: 5px;
+      background-color: #fff;
+      margin: 1rem;
+
+  }
+  .order-card >.card-header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #F6F6F6;
+      padding: 1rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .order-method>h3{
+      color: green;
+  }
+  .order-method{
+      padding: 1rem;
+  }
+  .product-name{
+      display: flex;
+      flex-direction: column;
+      grid-area: product-name;
+  }
+  .order-img{
+      grid-area: product-img;
+      width: 7rem;
+      height: 7rem;
+  }
+  .cansel-order{
+      grid-area: cancsel;
+  }
+  .order-detaile{
+      display: grid;
+      grid-gap: 2rem;
+      padding: 0 1.5rem 1rem;
+      grid-template-areas: 
+      'product-img product-name product-name cancsel';
+      align-items: center;
+  }
+  .cansel-order{
+      border:rgb(175, 174, 174) solid 2px; 
+    padding: 5px 25px;
+    border-radius: 10px;
+    background-color: #F2F4F7 ;
+  }
+  .product-decs{
+      font-size: small;
+  }
+  
+ 
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .left{
+       
+        border-right: none;
+        
+        border-bottom:1px solid black;
+    }
+    .card  {
+      margin-bottom: 15px;
+      }
+    .profile_section{
+      
+        grid-template-areas: 
+        'left left left'
+        'right right right'
+        'weather weather weather'
+    }
+    .order-detaile{
+       
+        grid-template-areas: 
+        'product-img '
+        'product-name'
+         'cancsel';
+        
+    }
+   
+}

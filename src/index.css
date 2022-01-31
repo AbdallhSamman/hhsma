@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link {
+    @apply cursor-pointer hover:underline;
+  }
+}
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amazon Ember",Arial,sans-serif;;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(234, 237, 237);
+}
+.text-xs {
+  text-align: left;
+}
+.product__border{
+  border: 1px solid #e9e9e9;
+}
+.button {
+  border-radius: 0.125rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(253 224 71 / var(--tw-border-opacity));
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: left;
+  background: #FFA41C;
+  border-color: #FF8F00;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+  text-align: center;
+}
+.h-12 {
+  height: 3.2rem;
+}
+.h-3 {
+  height: 1.2rem;
+}
+.bold {
+  font-weight: 500;
+}
+
+.on {
+  color: #000;
+}
+.off {
+  color: #ccc;
+}
+@media screen and (max-width: 639px) {
+  .d__hidden 
+ {
+    display: none;
+  }
+}
+.text-yellow-400,.text-yellow-500 {
+  --tw-text-opacity: 1;
+  color: #ffa41c;
+}

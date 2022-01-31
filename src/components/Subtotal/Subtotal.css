@@ -1,0 +1,36 @@
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-left: 5px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.subtotal__gift{
+    display: flex;
+    align-items: center;
+}
+.subtotal__gift >input{
+    margin-right: 5px;
+}
+.subtotal >button{
+    border-radius: 0.125rem;
+    --tw-border-opacity: 1;
+    border-color: rgb(253 224 71 / var(--tw-border-opacity));
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-align: left;
+    background: #FFA41C;
+    border-color: #FF8F00;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+    text-align: center;
+    margin-top: 20px;
+}
+@media (max-width:750px) {
+    .subtotal{
+        width: 100%;
+        margin-top: 20px;
+    }
+}

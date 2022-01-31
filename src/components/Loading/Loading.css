@@ -1,0 +1,20 @@
+.loading {
+  width: 100vw;
+  display: flex;
+  position: fixed;
+  /* transform: translate(-50%, -50%); */
+  align-items: center;
+  height: 100vh;
+  top: 50%;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* position: relative; */
+  background-color: rgb(252, 254, 252);
+  z-index: 100;
+  justify-content: center;
+}
+.loading__image {
+  display: block;
+  background-position: center center;
+}
