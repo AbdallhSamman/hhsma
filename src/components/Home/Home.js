@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Product from "../Product/Product";
 import "./Home.css";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Slider from "@mui/material/Slider";
-import { StarIcon } from "@heroicons/react/solid";
 import Videos from "../Videoes/Videos";
 import { useNavigate } from "react-router-dom";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/navigation";
 import { db } from "../Firebase/firebase";
-// import Swiper core and required modules
 import SwiperCore, { Navigation } from "swiper";
 import Loading from "../Loading/Loading";
-// install Swiper modules
 SwiperCore.use([Navigation]);
 
 function Home() {

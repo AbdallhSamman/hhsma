@@ -55,7 +55,6 @@ function Header() {
   return (
     <>
       <header className="header">
-        {/* top nav */}
         <Link to="/">
           <div className="flex items-center flex-grow sm:flex-grow-0">
             <img

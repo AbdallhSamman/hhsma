@@ -17,12 +17,6 @@ function Weather() {
           status:'resolved'});
         });
       }, []);
-      // const getUserLocation = ()=>{
-    
-      //   location = geolocation.getCurrentPosition();
-      //   console.log(location);
-      // }
-
   const dateBuilder = (d) => {
     const months = [
       "January",

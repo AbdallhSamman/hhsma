@@ -24,10 +24,8 @@ const Payment = () => {
   const [zip, setZip] = useState('')
   const [phone, setPhone] = useState('')
   const [building, setBuilding] = useState('')
-
   const [succeeded, setSucceeded] = useState(false)
   const [processing, setProcessing] = useState('')
-
   const [clientSecret, setClientSecret] = useState(true)
   useEffect(() => {
     const getClientSecret = async () => {
@@ -43,10 +41,8 @@ const Payment = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (auth.currentUser != null) {
-      
         saveAddress()
         saveOrder()
-     
     } else navigat('/login')
   }
   const handelAddress = (e) => {
@@ -175,9 +171,6 @@ const Payment = () => {
                         thousandSeparator={true}
                         prefix={'$'}
                       />
-                      {/* <button className="buyNow" >
-                          <span>{'Buy Now'}</span>
-                        </button> */}
                     </div>
                   </div>
                   <button

@@ -60,7 +60,6 @@ function App() {
           ></Route>
           <Route path="*" element={<NoMatch />} />
         </Routes>
-        {/* <Videos /> */}
         <Footer />
       </div>
     </BrowserRouter>

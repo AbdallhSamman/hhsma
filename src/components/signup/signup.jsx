@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import '../Login/login.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { auth , db} from '../Firebase/firebase'
-import { useStateValue } from "../../StateProvider";
+import { auth } from '../Firebase/firebase'
+
 
 
 function Signup() {
-    const [{ basket , user},dispatch] = useStateValue();
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')

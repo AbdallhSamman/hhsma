@@ -113,9 +113,6 @@ function changeColor(x){
             <p className="title">{user?.phone}</p>
             <p>Harvard University</p>
             <div style={{ margin: '24px 0' }}></div>
-            {/* <p>
-              <button className="change_info">Contact</button>
-            </p> */}
           </div>
           <div className="card">
         <Weather />

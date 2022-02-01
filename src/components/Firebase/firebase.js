@@ -466,21 +466,4 @@ function generateItems() {
     });
 }
 // generateItems();
-
-// generateItems();
-// let products = [];
-// db.collection("categories")
-//   .get()
-//   .then((querySnapshot) => {
-//     console.log(querySnapshot.docs[0].Df.sn.proto.mapValue.fields.category_id.integerValue);
-//     querySnapshot.forEach((doc) => {
-//       products.push(doc.data());
-
-//     });
-//     console.log( products[0]);
-//   })
-//   .catch((error) => {
-//     console.log("Error getting documents: ", error);
-//   });
-
 export { db, auth };

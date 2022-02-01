@@ -11,7 +11,6 @@ import { useStateValue } from "../../StateProvider";
 import { Pagination } from "swiper"; 
 
 function Item() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [{ basket }, dispatch] = useStateValue();
   const [item, setItem] = useState([]);
   const [related, setRelated] = useState([]);
@@ -35,7 +34,6 @@ function Item() {
         rating: item[0].product_rating/item[0].product_users_rating,
       },
     });
-    // let buy=document.querySelector('#buy')
     localStorage.setItem("cart", JSON.stringify(basket));
 
   }
