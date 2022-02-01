@@ -86,17 +86,8 @@ function Home() {
     return prod;
   };
 
-  const unfilter = () => {
-    setPriceFilter(999);
-    setRateFilter(5);
-  };
-
   useEffect(() => {
     const items = localStorage.getItem("items");
-    // if (items) {
-    //   setProducts(JSON.parse(items));
-    //   return;
-    // }
     db.collection("categories")
       .orderBy("products")
       .get()
@@ -163,6 +154,8 @@ function Home() {
           src="https://links.papareact.com/dyz"
           alt=""
         />
+                  <h3 className="home__header videos__title">Best products by users rated</h3>
+
         <div className="product__home__span2 grid grid-flow-row-dense md:col-span-2 sm:grid-cols-2 md:grid-cols-2">
           {filter_products
             .slice(0, 1)
