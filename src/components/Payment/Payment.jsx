@@ -43,8 +43,10 @@ const Payment = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (auth.currentUser != null) {
-      saveAddress()
-      saveOrder()
+      if(handelAddress(e)){
+        saveAddress()
+        saveOrder()
+      }
     } else navigat('/login')
   }
   const handelAddress = (e) => {
