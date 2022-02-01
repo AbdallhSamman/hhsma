@@ -4,7 +4,7 @@
     'left left right';
     padding: 20px ;
     height: max-content;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .checkout__ad{
     width: 100%;
