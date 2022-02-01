@@ -5,21 +5,22 @@
   margin-right: auto;
   max-width: 1500px;
 }
-
 .home__row {
   display: flex;
   z-index: 1;
   margin-left: 5px;
   margin-right: 5px;
 }
-
-
-
+.home__header {
+  font-size: 30px;
+  font-weight: 500;
+}
 .product__home {
     margin-top: -25rem;
 }
 .product__home__span2 
 {    padding: 50px;
+  padding-top: 10px;
 }
 /* slider */
 
