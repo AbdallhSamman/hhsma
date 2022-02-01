@@ -46,7 +46,6 @@ const Payment = () => {
       
         saveAddress()
         saveOrder()
-        navigat('/home')
      
     } else navigat('/login')
   }
