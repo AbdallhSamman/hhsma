@@ -122,25 +122,6 @@ function Item() {
     );
   }
 
-  const saveComment = () => {
-    item[0]?.product_comments.map((e) => {
-      // comments.push(e);
-      // console.log(userComment);
-    });
-    // console.log(edit);
-    // console.log(data);
-    // comments.push(userComment);
-    // db.collection("categories")
-    //   .doc("Electronics-Categories")
-    //   .set({
-    //     products: [
-    //       {
-    //         product_id: itemId,
-    //         product_comments: [{ comments }],
-    //       },
-    //     ],
-    //   });
-  };
   return (
     <div className="bg-white outline outline-[43px] outline-white">
       <div className="mx-5 my-10 bg-white">
@@ -219,40 +200,6 @@ function Item() {
           >
             {sliders}
           </Swiper>
-        </div>
-        <hr className="hr__singe" />
-        <div className="conHeader">
-          <h3 className="secHeader a-size-medium">Customer reviews</h3>
-          <div className="md:grid md:gap-10 md:grid-cols-2">
-            <div className="rightt">
-              {item[0]?.product_comments.map((e) => {
-                return (
-                  <div>
-                    <div className="flex items-center">
-                      <img
-                        src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png"
-                        alt=""
-                        width={50}
-                        height={50}
-                      />
-                      <p>Haitham Assoli</p>
-                    </div>
-                    <StarIcon className="h-5 w-5 text-yellow-400 inline-block" />
-                    <StarIcon className="h-5 w-5 text-yellow-400 inline-block" />
-                    <StarIcon className="h-5 w-5 text-yellow-400 inline-block" />
-                    <StarIcon className="h-5 w-5 text-yellow-400 inline-block" />
-                    <StarIcon className="h-5 w-5 text-yellow-400 inline-block" />
-                    <p className="">{e.user_comment}</p>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="">
-              <h3 className="text-xl font-bold">Add your review</h3>
-              <CKEditor data="<p>Hello from CKEditor 4!</p>" />
-              <button className="button mt-4">Add Review</button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
