@@ -5,23 +5,54 @@ import "swiper/css/bundle";
 import { CKEditor } from "ckeditor4-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { db } from "../Firebase/firebase";
-import { useParams } from "react-router-dom";
+import { useParams ,useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
-import { Pagination } from "swiper";
+import { useStateValue } from "../../StateProvider";
+import { Pagination } from "swiper"; 
 
 function Item() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [{ basket }, dispatch] = useStateValue();
   const [item, setItem] = useState([]);
   const [related, setRelated] = useState([]);
   let product = [];
   let slider = [];
   let stars = [];
+  const navigate=useNavigate();
 
   const params = useParams();
   const itemId = params.itemId;
   const category = params.category;
 
+  const addToBasket = () => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id:item[0].product_id,
+        title: item[0].product_name,
+        image: item[0].product_images,
+        price: item[0].product_price,
+        rating: item[0].product_rating/item[0].product_users_rating,
+      },
+    });
+    // let buy=document.querySelector('#buy')
+    localStorage.setItem("cart", JSON.stringify(basket));
+
+  }
+  const buynow=()=>{
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: item[0].product_id,
+        title: item[0].product_name,
+        image: item[0].product_images,
+        price: item[0].product_price,
+        rating: item[0].product_rating/item[0].product_users_rating,
+      },
+    });
+    localStorage.setItem("cart", JSON.stringify(basket));
+    navigate('/payment')
+  }
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -164,10 +195,11 @@ function Item() {
             </p>
             <p className="text-green-600">In Stock.</p>
             <br />
-            <button className="button w-full rounded-2xl mb-2">
+            
+            <button className="button w-full rounded-2xl mb-2" onClick={addToBasket}>
               Add to Cart
             </button>
-            <button className="button w-full rounded-2xl">Buy Now</button>
+            <button id="buy" className="button w-full rounded-2xl" onClick={buynow}>Buy Now</button>
             <p className="text-sm text-gray-500 mt-2">Ships from Amazon.com</p>
           </aside>
         </div>
