@@ -40,6 +40,23 @@ input[type=checkbox]:checked ~ .Filter {
 .m__button:hover {
   background: #e2b80f;
 }
+.gridFilterHeader{
+ cursor: default;
+ margin-bottom: 25px;
+  background-color: whitesmoke;
+  
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.gridFilterSection{
+   background-color: rgb(241, 239, 239);
+   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+.CatsNames{
+  cursor: pointer;
+}
+.CatsNames:hover{
+  color: #e2b80f;
+}
 @media screen and (max-width: 639px) {
   .grid-container {
     display: flex;

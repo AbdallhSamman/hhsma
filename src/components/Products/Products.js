@@ -62,11 +62,6 @@ const Products = () => {
   };
 
   useEffect(() => {
-    const allItem = localStorage.getItem("allItem");
-    // if (allItem) {
-    //   setProducts(JSON.parse(allItem));
-    //   return;
-    // }
     db.collection("categories")
       .get()
       .then((querySnapshot) => {
@@ -83,7 +78,7 @@ const Products = () => {
         setProductsFilter(product);
       })
       .catch((error) => {
-        // console.log("Error getting documents: ", error.message);
+        
 		setSearch("");
         setProducts(product);
         setProductsFilter(product);
@@ -97,21 +92,23 @@ const Products = () => {
         <div className="m__hidden m__button">Filter</div>
 
         <div className="Filter">
-          <div aria-label="Deals filters" className="gridFilterSection">
+          <div aria-label="Deals filters" className="gridFilterSection p-5">
+            Filters :
             <span>
               <span aria-label="Price filter">
-                <div className="gridFilterHeader">Category</div>
+                <div className="gridFilterHeader p-4 font-bold  ">Category
 				{categories?.map((ele)=>(
 					  <div onClick={()=>{
-						  searchBar.value=ele; setSearch(searchBar.value)}} className="a-row">{ele.split('-')[0]}</div>
-				))}
+						  searchBar.value=ele; setSearch(searchBar.value)}} className="CatsNames pl-7 font-normal">{ele.split('-')[0]}</div>
+              ))}
+              </div>
               
               </span>
             </span>
             <span>
               <span aria-label="Price filter">
-                <div className="gridFilterHeader">Price</div>
-                <div className="a-row">
+                <div className="gridFilterHeader p-4 font-bold">Price
+                <div >
                   <Slider
                     min={0}
                     max={80}
@@ -123,12 +120,13 @@ const Products = () => {
                     valueLabelDisplay="auto"
                   />
                 </div>
+                </div>
               </span>
             </span>
             <span data-testid="grid-filter-REVIEWS">
               <span aria-label="rating__filter">
-                <div className="gridFilterHeader">Average Customer Review</div>
-                <div className="a-row">
+                <div className="gridFilterHeader p-4 font-bold">Average Customer Review
+                <div>
                   <div className="star-rating">
                     {[...Array(5)].map((star, index) => {
                       index += 1;
@@ -155,6 +153,7 @@ const Products = () => {
                       );
                     })}
                   </div>
+                </div>
                 </div>
               </span>
             </span>
